@@ -10,3 +10,6 @@ __Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, create a `UI 
 This _gem_ allows you to slow down and speed up animations (or even stop them completely). This makes it easier to spot subtle movement errors.
 
 __Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, create a `UI Text` and name it `speedText` (optional, shows the current animation speed). While pressing the hotkey (default is left shift), scroll the mouse wheel to speed up or slow down the animation. Pressing the speed reset hotkey (default is space) will reset the speed to 100%.
+
+## Screenshots
+![Screenshot](https://github.com/DenchiSoft/CubismViewerGems/blob/master/images/cub_gem.png?raw=true "Screenshot")
