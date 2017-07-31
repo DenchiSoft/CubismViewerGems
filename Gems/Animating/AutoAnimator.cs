@@ -14,8 +14,8 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 	/// <summary>
 	/// Shows available clips in dropdown and starts selected animation.
 	/// </summary>
-    public sealed class AutoAnimator : MonoBehaviour
-    {
+	public sealed class AutoAnimator : MonoBehaviour
+	{
 		// Dropdown UI element.
 		private Dropdown animDropdown;
 
@@ -43,12 +43,12 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			Key = KeyCode.LeftArrow
 		};
 				
-        /// <summary>
-        /// Called by Unity. Registers handler.
-        /// </summary>
-        private void Start()
-        {
-            var viewer = GetComponent<CubismViewer>();
+		/// <summary>
+		/// Called by Unity. Registers handler.
+		/// </summary>
+		private void Start()
+		{
+			var viewer = GetComponent<CubismViewer>();
 
 			// Get dropdown UI element, clear content and disable.
 			animDropdown = GameObject.Find("animDropdown").GetComponent<Dropdown>();
@@ -60,19 +60,19 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			animDropdown.onValueChanged.AddListener(delegate{DropdownSelected();});
 
 
-            // Fail silently in release.
-            if (viewer == null)
-            {
-                Debug.LogWarning("Not attached to viewer!");
+			// Fail silently in release.
+			if (viewer == null)
+			{
+				Debug.LogWarning("Not attached to viewer!");
 
 
-                return;
-            }
+				return;
+			}
 				
 
-            // Register event handler.
-            viewer.OnFileDrop += HandleFileDrop;           
-        }
+			// Register event handler.
+			viewer.OnFileDrop += HandleFileDrop;		   
+		}
 
 		/// <summary>
 		/// Called by Unity. Updates controls.
@@ -128,18 +128,18 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 		}
 
 
-        /// <summary>
-        /// Handles file drops.
-        /// </summary>
-        /// <param name="sender">Event source.</param>
-        /// <param name="absolutePath">Absolute path of dropped file.</param>
-        private void HandleFileDrop(CubismViewer sender, string absolutePath)
-        {
-            // Skip non-motion files.
+		/// <summary>
+		/// Handles file drops.
+		/// </summary>
+		/// <param name="sender">Event source.</param>
+		/// <param name="absolutePath">Absolute path of dropped file.</param>
+		private void HandleFileDrop(CubismViewer sender, string absolutePath)
+		{
+			// Skip non-motion files.
 			if (!absolutePath.EndsWith("motion3.json"))
-            {
-                return;
-            }
+			{
+				return;
+			}
 
 			// Save reference to viewer.
 			viewer = sender;
@@ -158,7 +158,7 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			animDropdown.AddOptions(filenames);
 			animDropdown.enabled = true;
 			animDropdown.value = selected;
-        }
+		}
 
-    }
+	}
 }

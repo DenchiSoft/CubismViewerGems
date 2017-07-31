@@ -15,7 +15,7 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 	/// Shows available clips in dropdown and starts selected animation.
 	/// </summary>
 	public sealed class AnimationControls : MonoBehaviour
-    {
+	{
 		// Text UI element to view current speed.
 		private Text speedText;
 
@@ -53,17 +53,17 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 		[SerializeField, Range(0.01f, 0.1f)]
 		float AnimSpeedScale = 0.03f;
 
-        /// <summary>
-        /// Called by Unity. Set speed to 1 on start.
-        /// </summary>
-        private void Start()
-        {
+		/// <summary>
+		/// Called by Unity. Set speed to 1 on start.
+		/// </summary>
+		private void Start()
+		{
 			// Get speed text view.
 			speedText = GameObject.Find("speedText").GetComponent<Text>();
 
 			// Reset animation speed.
 			AnimSpeed = 1.0f;
-        }
+		}
 
 		/// <summary>
 		/// Sets text of animation speed text field if it exists.
@@ -99,5 +99,5 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			SetAnimSpeedText();
 		}
 
-    }
+	}
 }
