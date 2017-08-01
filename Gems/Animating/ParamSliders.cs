@@ -1,4 +1,4 @@
-﻿ using UnityEngine;
+﻿using UnityEngine;
 using Live2D.Cubism.Core;
 using UnityEngine.UI;
 using System.Collections.Generic;
