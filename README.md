@@ -11,5 +11,11 @@ This _gem_ allows you to slow down and speed up animations (or even stop them co
 
 __Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, create a `UI Text` and name it `speedText` (optional, shows the current animation speed). While pressing the hotkey (default is left shift), scroll the mouse wheel to speed up or slow down the animation. Pressing the speed reset hotkey (default is space) will reset the speed to 100%.
 
+### `ParamSliders`
+This _gem_ allows you to view and modify parameter values of your model. When playing animations, sliders will reflect the parameter values, but can be overridden for individual parameters at the same time.
+
+__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `paramScroll.prefab` to your UI. When you start the scene, select your model and (optionally) animation like normal. The sliders will show the current parameter value while the animation is playing. Drag any slider to fix the associated parameter value. The red tint will indicate that this parameter is now being overridden, meaning it is no longer controlled by the animation. Other parameters will still be controlled by the animation. Uncheck the toggle button to stop overriding a parameter and give control back to the animation. The `Reset Override` button resets the override mode for all parameters.
+
+
 ## Screenshots
 ![Screenshot](https://github.com/DenchiSoft/CubismViewerGems/blob/master/images/cub_gem.png?raw=true "Screenshot")
