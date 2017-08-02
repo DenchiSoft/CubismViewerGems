@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System;
+using Live2D.Cubism.Core;
 
 
 namespace Live2D.Cubism.Viewer.Gems.Animating
@@ -70,8 +71,9 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			}
 				
 
-			// Register event handler.
-			viewer.OnFileDrop += HandleFileDrop;		   
+			// Register event handlers.
+			viewer.OnFileDrop += HandleFileDrop;
+			viewer.OnNewModel += OnNewModel;
 		}
 
 		/// <summary>
@@ -86,15 +88,13 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			// Play next animation loop on hotkey.
 			if (NextAnimHotKey.EvaluateJust())
 			{
-				int maxVal = files.Length;
-				animDropdown.value = animDropdown.value == maxVal - 1 ? 0 : animDropdown.value + 1;
+				animDropdown.value = animDropdown.value == files.Length ? 0 : animDropdown.value + 1;
 			}
 
 			// Play previous animation loop on hotkey.
 			if (PrevAnimHotKey.EvaluateJust())
 			{
-				int maxVal = files.Length;
-				animDropdown.value = animDropdown.value == 0 ? maxVal - 1 : animDropdown.value - 1;
+				animDropdown.value = animDropdown.value == 0 ? files.Length : animDropdown.value - 1;
 			}
 
 		}
@@ -113,7 +113,13 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 				animator = model.gameObject.AddComponent<Animation>();
 			}
 
-			string absolutePath = files[animDropdown.value];
+			// Check if "no animation" entry is selected.
+			if (animDropdown.value == 0) {
+				animator.Stop();
+				return;
+			}
+
+			string absolutePath = files[animDropdown.value - 1];
 
 			// Deserialize animation.
 			var model3Json = CubismMotion3Json.LoadFrom(CubismViewerIo.LoadAsset<string>(absolutePath));
@@ -150,14 +156,29 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			// Get filenames without path for display.
 			List<string> filenames = files.Select(a => Path.GetFileName(a).Replace(".motion3.json", String.Empty)).ToList();
 
+			// Add option for no animation.
+			filenames.Insert(0, "--- None ---");
+
 			// Get index of currently selected file.
-			int selected = Array.IndexOf(files, absolutePath);
+			int selected = Array.IndexOf(files, absolutePath) + 1;
 
 			// Enable dropdown and show list of filenames.
 			animDropdown.ClearOptions();
 			animDropdown.AddOptions(filenames);
 			animDropdown.enabled = true;
 			animDropdown.value = selected;
+		}
+
+		/// <summary>
+		/// Called when a new Model is loaded.
+		/// </summary>
+		/// <param name="sender">The Sender/CubismViewer.</param>
+		/// <param name="model">The new Model.</param>
+		private void OnNewModel(CubismViewer sender, CubismModel model) {
+			// Clear animation list when new model is loaded.
+			animDropdown.ClearOptions();
+			animDropdown.captionText.text = "Load one motion first";
+			animDropdown.enabled = false;
 		}
 
 	}
