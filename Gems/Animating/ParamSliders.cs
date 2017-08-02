@@ -17,6 +17,9 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 		// List containing all value/UI related information for each CubismParameter.
 		private List<CubismParameterInfo> CubismParamsInfo;
 
+		// If set, all parameters are reset on the next frame.
+		private bool ResetAllParams;
+
 		/// <summary>
 		/// Called by Unity. 
 		/// </summary>
@@ -31,9 +34,12 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 				return;
 			}
 
-			// Listeners for button click and new model event.
+			// Listeners for button clicks and new model event.
 			Button resetOverrideButton = GameObject.Find("ResetOverrideButton").GetComponent<Button>();
 			resetOverrideButton.onClick.AddListener(delegate {ResetOverrideClicked(); });
+
+			Button resetPositionButtonText = GameObject.Find("ResetPositionButton").GetComponent<Button>();
+			resetPositionButtonText.onClick.AddListener(delegate {ResetPositionClicked(); });
 
 			viewer.OnNewModel += OnNewModel;
 		}
@@ -115,6 +121,18 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 		}
 
 		/// <summary>
+		/// Called when the reset position button is clicked.
+		/// Resets character (all parameters) back to default state.
+		/// </summary>
+		private void ResetPositionClicked() {
+			if (CubismParamsInfo == null || CubismParamsInfo.Count == 0)
+				return;
+			
+			// Reset all parameters to default pose.
+			ResetAllParams = true;
+		}
+
+		/// <summary>
 		/// Called when override button is toggled.
 		/// Also called when user presses the reset button or manually moves a slider.
 		/// </summary>
@@ -157,7 +175,13 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			// If a paremeter is in override mode, set override value.
 			// If not, set value and indicate it has been set by the animation.
 			foreach (CubismParameterInfo param in CubismParamsInfo) {
-				if (param.Active) {
+				if (ResetAllParams) {
+					param.ValueSetByAnimation = true;
+					param.Parameter.Value = param.Parameter.DefaultValue;
+					param.OverrideVal = param.Parameter.DefaultValue;
+					param.Slider.value = param.Parameter.DefaultValue;
+					param.ValueText.text = System.Math.Round(param.Parameter.Value, 2).ToString();
+				} else if (param.Active) {
 					param.Parameter.Value = param.OverrideVal;
 					param.ValueText.text = System.Math.Round(param.OverrideVal, 2).ToString();
 				} else {
@@ -166,6 +190,9 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 					param.ValueText.text = System.Math.Round(param.Parameter.Value, 2).ToString();
 				}
 			}
+
+			// Only reset once.
+			ResetAllParams = false;
 		}
 	}
 }
