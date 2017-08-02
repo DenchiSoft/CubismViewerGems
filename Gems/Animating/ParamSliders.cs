@@ -135,7 +135,7 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 
 			// Check if the call came from LateUpdate().
 			if (!param.ValueSetByAnimation) {
-				// If not, the parameter is not considered in override mode.
+				// If not, the parameter is now considered in override mode.
 				param.Active = true;
 				param.OverrideVal = newValue;
 				param.Toggle.isOn = true;
