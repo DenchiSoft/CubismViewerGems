@@ -32,3 +32,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+*.meta
+Gems/Theming/TwoColorThemer.cs
+Gems/CameraControls.cs
+Gems/Theming/TwoColorTheme.cs
+Gems/Animating/SimpleAnimator.cs
