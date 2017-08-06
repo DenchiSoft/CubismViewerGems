@@ -28,6 +28,8 @@ This _gem_ allows you to capture Cubism model animations and record them to `.mo
 
 __Setup/Usage:__ Download and import `FFmpegOut.unitypackage` from https://github.com/keijiro/FFmpegOut/releases (tested with Version 0.1.1). Then, add this _gem_ (`CubismRecorder.cs`) to the `CubismViewer` object and add `RecordPanel.prefab` to your UI. This _gem_ requires the `AutoAnimator` _gem_, so make sure you also have that one added to your scene. When you start the scene, select your model and animation like normal. The `Record Animation` button will start recording your currently playing animation from start to finish at the set framerate (up to 120 FPS) and the current window resolution. The UI is not recorded. Checking the `Double Resolution` box will record the current animation at double the window resolution. The output videos are saved as high quality `.mov` files, so be careful as they tend to become quite big when capturing at high resolution/framerate. When playing the scene in Unity, the videos are saved in the project root folder. When playing a standalone build, videos are saved next to the executable. 
 
+_Note:_ This _gem_ can be used together with the `AnimationController` _gem_, although it is not recommended.
+
 
 ## Screenshots
 ![Screenshot](https://raw.githubusercontent.com/DenchiSoft/CubismViewerGems/master/images/viewer_screenshot_v3.png "Screenshot")
