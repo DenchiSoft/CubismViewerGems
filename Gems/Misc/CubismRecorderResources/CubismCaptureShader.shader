@@ -1,3 +1,4 @@
+﻿// Modified version of CameraCapture.shader, originally written by Keijiro Takahashi for FFmpegOut:
 // https://github.com/keijiro/FFmpegOut
 // 
 // Copyright by Keijiro Takahashi, licensed under the MIT license:
