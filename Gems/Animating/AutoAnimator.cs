@@ -116,6 +116,7 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			// Check if "no animation" entry is selected.
 			if (animDropdown.value == 0) {
 				animator.Stop();
+				animator.clip = null;
 				return;
 			}
 
@@ -127,6 +128,10 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			var clip = model3Json.ToAnimationClip();
 			clip.wrapMode = WrapMode.Loop;
 			clip.legacy = true;
+
+			// Set clip info in animator (needed for recording with CubismRecorder).
+			clip.name = clipName;
+			animator.clip = clip;
 
 			// Play animation.
 			animator.AddClip(clip, clipName);
@@ -180,6 +185,5 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 			animDropdown.captionText.text = "Load one motion first";
 			animDropdown.enabled = false;
 		}
-
 	}
 }
