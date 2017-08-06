@@ -1,6 +1,8 @@
 # CubismViewerGems
 Some _gems_ for the __Live2D Cubism Viewer__ at https://github.com/Live2D/CubismViewer to speed up and simplify Cubism model/animation testing in Unity.
 
+__Releases:__ Standalone Windows builds can be found in the [releases section](https://github.com/DenchiSoft/CubismViewerGems/releases).
+
 ### `AutoAnimator`
 This _gem_ allows you to cycle through animations using hotkeys (default is left/right arrow keys) or select animations from a dropdown menu. This _gem_ works with and without the official `SimpleAnimator` _gem_.
 
