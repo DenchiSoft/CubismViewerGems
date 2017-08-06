@@ -14,8 +14,14 @@ __Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, create a `UI 
 ### `ParamSliders`
 This _gem_ allows you to view and modify parameter values of your model. When playing animations, sliders will reflect the parameter values, but can be overridden for individual parameters at the same time.
 
-__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `paramScroll.prefab` to your UI. When you start the scene, select your model and (optionally) animation like normal. The sliders will show the current parameter value while the animation is playing. Drag any slider to fix the associated parameter value. The red tint will indicate that this parameter is now being overridden, meaning it is no longer controlled by the animation. Other parameters will still be controlled by the animation. Uncheck the toggle button to stop overriding a parameter and give control back to the animation. The `Reset Override` button resets the override mode for all parameters.
+__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `paramScroll.prefab` to your UI. When you start the scene, select your model and (optionally) animation like normal. The sliders will show the current parameter value while the animation is playing. Drag any slider to fix the associated parameter value. The red tint will indicate that this parameter is now being overridden, meaning it is no longer controlled by the animation. Other parameters will still be controlled by the animation. Uncheck the toggle button to stop overriding a parameter and give control back to the animation. The `Reset Override` button resets the override mode for all parameters. The `Reset Position` button resets the model back to the default pose.
+
+
+### `PartSliders`
+This _gem_ allows you to view and modify part opacities of your model. When playing animations, sliders will reflect the part opacity values, but can be overridden for individual parts at the same time.
+
+__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `partScroll.prefab` to your UI. When you start the scene, select your model and (optionally) animation like normal. The sliders will show the current part opacity value while the animation is playing. Drag any slider to fix the associated part opacity value. The red tint will indicate that this part opacity is now being overridden, meaning it is no longer controlled by the animation. Other part opacities will still be controlled by the animation. Uncheck the toggle button to stop overriding a part opacity value and give control back to the animation. The `Reset Override` button resets the override mode for all parts. The `Reset Visibility` button resets all part visibility values back to default.
 
 
 ## Screenshots
-![Screenshot](https://github.com/DenchiSoft/CubismViewerGems/blob/master/images/cub_gem.png?raw=true "Screenshot")
+![Screenshot](https://github.com/DenchiSoft/CubismViewerGems/blob/master/images/viewer_screenshot_v2.png?raw=true "Screenshot")
