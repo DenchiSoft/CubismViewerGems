@@ -23,5 +23,11 @@ This _gem_ allows you to view and modify part opacities of your model. When play
 __Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `partScroll.prefab` to your UI. When you start the scene, select your model and (optionally) animation like normal. The sliders will show the current part opacity value while the animation is playing. Drag any slider to fix the associated part opacity value. The red tint will indicate that this part opacity is now being overridden, meaning it is no longer controlled by the animation. Other part opacities will still be controlled by the animation. Uncheck the toggle button to stop overriding a part opacity value and give control back to the animation. The `Reset Override` button resets the override mode for all parts. The `Reset Visibility` button resets all part visibility values back to default.
 
 
+### `CubismRecorder`
+This _gem_ allows you to capture Cubism model animations and record them to `.mov` files in high quality at any resolution/FPS. It is based on [FFmpegOut](https://github.com/keijiro/FFmpegOut) by Keijiro Takahashi.
+
+__Setup/Usage:__ Download and import `FFmpegOut.unitypackage` from https://github.com/keijiro/FFmpegOut/releases (tested with Version 0.1.1). Then, add this _gem_ (`CubismRecorder.cs`) to the `CubismViewer` object and add `RecordPanel.prefab` to your UI. This _gem_ requires the `AutoAnimator` _gem_, so make sure you also have that one added to your scene. When you start the scene, select your model and animation like normal. The `Record Animation` button will start recording your currently playing animation from start to finish at the set framerate (up to 120 FPS) and the current window resolution. The UI is not recorded. Checking the `Double Resolution` box will record the current animation at double the window resolution. The output videos are saved as high quality `.mov` files, so be careful as they tend to become quite big when capturing at high resolution/framerate. When playing the scene in Unity, the videos are saved in the project root folder. When playing a standalone build, videos are saved next to the executable. 
+
+
 ## Screenshots
-![Screenshot](https://github.com/DenchiSoft/CubismViewerGems/blob/master/images/viewer_screenshot_v2.png?raw=true "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/DenchiSoft/CubismViewerGems/master/images/viewer_screenshot_v3.png "Screenshot")
