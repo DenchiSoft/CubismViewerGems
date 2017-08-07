@@ -21,7 +21,9 @@ public class CubismRecorder : MonoBehaviour {
 	// The FPS text input field.
 	InputField FPSInputField;
 
-	// Use this for initialization
+	/// <summary>
+	/// Called by Unity.
+	/// </summary>
 	void Start () {
 		// Set initial recording state to false.
 		Recording = false;
@@ -35,6 +37,9 @@ public class CubismRecorder : MonoBehaviour {
 		FPSInputField.text = "30";
 	}
 
+	/// <summary>
+	/// Called when Record Animation button is pressed.
+	/// </summary>
 	private void StartRecord() {
 		// Return if already recording.
 		if (Recording) {
@@ -91,7 +96,7 @@ public class CubismRecorder : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Indicates capture progress and enabled capture button when done.
+	/// Indicates capture progress and enables capture button when done.
 	/// </summary>
 	/// <param name="length">Animation clip length.</param>
 	private IEnumerator EnableButton(float length) {
@@ -100,7 +105,7 @@ public class CubismRecorder : MonoBehaviour {
 		// Show capture progress.
 		for (int i = 0; i <= 100; i++) {
 			yield return new WaitForSeconds(length / 100f);
-			progressText.text = "Pogress: " + i + "%";
+			progressText.text = "Progress: " + i + "%";
 		}
 
 		// Indicate finished state and enable button.
