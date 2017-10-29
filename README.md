@@ -30,6 +30,12 @@ This _gem_ allows you to disable and enable physics for a model, given a physics
 
 __Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `PhysicsToggle.prefab` to your UI. When you start the scene, select your model. If a physics file was found in the same folder as the model, you can now use the toggle button to turn on/off physics for your model. Physics work with and without animations, much like in the Live2D Cubism Physics Editor.
 
+### `LookAround`
+This _gem_ allows you to make your character "look at" your cursor. 
+
+__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then click and drag while pressing the ALT-key on your keyboard. This will make your model/character look towards the mouse pointer. This works together nicely with physics and animations: If you make the character look towards your mouse pointer, this will override any value set by the animation.
+
+_Note:_ The affected parameter IDs are `ParamAngleX`, `ParamAngleY`, `ParamAngleZ`, `ParamEyeBallX`, `ParamEyeBallY`, `ParamBodyAngleX`, `ParamBodyAngleY` and `ParamBodyAngleZ`.
 
 ### `CubismRecorder`
 This _gem_ allows you to capture Cubism model animations and record them to `.mov` files in high quality at any resolution/FPS. It is based on [FFmpegOut](https://github.com/keijiro/FFmpegOut) by Keijiro Takahashi.
