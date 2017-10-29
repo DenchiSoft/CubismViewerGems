@@ -44,7 +44,7 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 		/// <summary>
 		/// Physics button toggle listener.
 		/// </summary>
-		/// <param name="setOn"><c>true</c> if checked, <c>>false</c> otherwise.</param>
+		/// <param name="setOn"><c>true</c> if checked, <c>false</c> otherwise.</param>
 		private void setPhysics(bool setOn) {
 			// Disable/Enable physics controller for model if it has one. Otherwise just return.
 			if (physController != null) 

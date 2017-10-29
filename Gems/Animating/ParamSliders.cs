@@ -82,7 +82,7 @@ namespace Live2D.Cubism.Viewer.Gems.Animating
 
 				// Set text fields.
 				Text t = newParam.GetComponentsInChildren<Text>()[3];
-				newParam.GetComponentsInChildren<Text>()[0].text =p.Id;
+				newParam.GetComponentsInChildren<Text>()[0].text = p.Id;
 				newParam.GetComponentsInChildren<Text>()[1].text = p.MinimumValue.ToString();
 				newParam.GetComponentsInChildren<Text>()[2].text = p.MaximumValue.ToString();
 				t.text = p.Value.ToString();
