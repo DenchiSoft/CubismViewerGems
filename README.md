@@ -6,6 +6,7 @@ Some _gems_ for the __Live2D Cubism Viewer__ at https://github.com/Live2D/Cubism
 
 __Releases:__ Standalone Windows builds can be found in the [releases section](https://github.com/DenchiSoft/CubismViewerGems/releases).
 
+
 ## Contents
 
 - [Controls](#controls)
@@ -20,7 +21,15 @@ __Releases:__ Standalone Windows builds can be found in the [releases section](h
 - [Screenshots](#screenshots)
 
 ## Controls
+All controls/shortcuts are listed in the table below.
 
+| Command | Description |
+| --- | --- |
+| <kbd>CTRL</kbd> + `Drag` | Drag model position |
+| <kbd>ALT</kbd> + `Mouse Wheel` | Resize model |
+| <kbd>SHIFT</kbd> + `Mouse Wheel` | Change animation speed |
+| <kbd>SPACE</kbd> | Reset animation speed |
+| <kbd>ALT</kbd> + `Drag` | Make model look at mouse pointer |
 
 ## Gems
 
