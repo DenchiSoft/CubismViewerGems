@@ -25,6 +25,12 @@ This _gem_ allows you to view and modify part opacities of your model. When play
 __Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `partScroll.prefab` to your UI. When you start the scene, select your model and (optionally) animation like normal. The sliders will show the current part opacity value while the animation is playing. Drag any slider to fix the associated part opacity value. The red tint will indicate that this part opacity is now being overridden, meaning it is no longer controlled by the animation. Other part opacities will still be controlled by the animation. Uncheck the toggle button to stop overriding a part opacity value and give control back to the animation. The `Reset Override` button resets the override mode for all parts. The `Reset Visibility` button resets all part visibility values back to default.
 
 
+### `PhysicsController`
+This _gem_ allows you to disable and enable physics for a model, given a physics file is in the same directory as the model file.
+
+__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Then, add `PhysicsToggle.prefab` to your UI. When you start the scene, select your model. If a physics file was found in the same folder as the model, you can now use the toggle button to turn on/off physics for your model. Physics work with and without animations, much like in the Live2D Cubism Physics Editor.
+
+
 ### `CubismRecorder`
 This _gem_ allows you to capture Cubism model animations and record them to `.mov` files in high quality at any resolution/FPS. It is based on [FFmpegOut](https://github.com/keijiro/FFmpegOut) by Keijiro Takahashi.
 
@@ -34,4 +40,4 @@ _Note:_ This _gem_ can be used together with the `AnimationController` _gem_, al
 
 
 ## Screenshots
-![Screenshot](https://raw.githubusercontent.com/DenchiSoft/CubismViewerGems/master/images/viewer_screenshot_v3.png "Screenshot")
+![Screenshot](https://raw.githubusercontent.com/DenchiSoft/CubismViewerGems/master/images/viewer_screenshot_v1_0.png "Screenshot")
