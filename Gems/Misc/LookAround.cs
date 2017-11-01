@@ -104,9 +104,9 @@ namespace Live2D.Cubism.Viewer.Gems.Misc
 				// Set parameters accordingly.
 				// Parameters like "ParamAngleX" that end in "X" are considered to be controlled by the x position of the cursor, etc.
 				foreach (CubismParameter p in CubismParams) {
-					if (p.Id.EndsWith("X") || p.Id.EndsWith("ParamAngleZ")) {
+					if (p.Id.EndsWith("X") || p.Id.EndsWith("ParamAngleZ") || p.Id.EndsWith("ParamBodyAngleZ")) {
 						p.Value = Mathf.Lerp(p.MinimumValue, p.MaximumValue, pos.x);
-					} else if (p.Id.EndsWith("Y") || p.Id.EndsWith("ParamBodyAngleZ")) { 
+					} else if (p.Id.EndsWith("Y")) { 
 						p.Value = Mathf.Lerp(p.MinimumValue, p.MaximumValue, pos.y);
 					}
 				}
