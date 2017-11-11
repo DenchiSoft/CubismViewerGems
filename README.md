@@ -71,7 +71,7 @@ _Note:_ The affected parameter IDs are `ParamAngleX`, `ParamAngleY`, `ParamAngle
 ### `BGColor`
 This _gem_ allows you to change the canvas background color. 
 
-__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Next, download _"uGUI Color Picker - Free Versuin uCPf"_ by Magcat from the Unity Asset store and add its `PresetColorPicker.prefab` to your UI. Make sure the GameObject name is PresetColorPicker. This GameObject has a ColorPicker-script attached. In this script, set the `onChange` to the `ColorChanged` function of the `BGColor` script. Lastly, add a button to your UI and set its `onChange` to the `BGColorButtonClicked` function of the `BGColor` script.
+__Setup/Usage:__ Add the _gem_ to the `CubismViewer` object. Next, download _"uGUI Color Picker - Free Versuin - uCPf"_ by Magcat from the Unity Asset store and add its `PresetColorPicker.prefab` to your UI. Make sure the GameObject name is PresetColorPicker. This GameObject has a ColorPicker-script attached. In this script, set the `onChange` to the `ColorChanged` function of the `BGColor` script. Lastly, add a button to your UI and set its `onChange` to the `BGColorButtonClicked` function of the `BGColor` script.
 
 Clicking the button will now open and close the color picker dialog. Changing the color in the dialog will change the camera's background color. 
 
