@@ -31,6 +31,7 @@ All controls/shortcuts are listed in the table below.
 | <kbd>SHIFT</kbd> + `Mouse Wheel` | Change animation speed |
 | <kbd>SPACE</kbd> | Reset animation speed |
 | <kbd>ALT</kbd> + `Drag` | Make model look at mouse pointer |
+| <kbd>H</kbd> | Hide/Show UI |
 
 ## Gems
 
