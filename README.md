@@ -4,12 +4,13 @@
 # CubismViewerGems
 Some _gems_ for the __Live2D Cubism Viewer__ at https://github.com/Live2D/CubismViewer to speed up and simplify Cubism model/animation testing in Unity.
 
-__Releases:__ Standalone Windows builds can be found in the [releases section](https://github.com/DenchiSoft/CubismViewerGems/releases).
+:warning: __Download:__ Standalone Windows builds (64 bit) can be found in the [releases section](https://github.com/DenchiSoft/CubismViewerGems/releases). :warning:
 
 
 ## Contents
 
 - [Controls](#controls)
+- [Screenshots](#screenshots)
 - [Gems](#gems)
   - [AutoAnimator](#autoanimator)
   - [AnimationController](#animationcontroller)
@@ -19,7 +20,6 @@ __Releases:__ Standalone Windows builds can be found in the [releases section](h
   - [LookAround](#lookaround)
   - [BGColor](#bgcolor)
   - [CubismRecorder](#cubismrecorder)
-- [Screenshots](#screenshots)
 
 ## Controls
 All controls/shortcuts are listed in the table below.
@@ -32,6 +32,11 @@ All controls/shortcuts are listed in the table below.
 | <kbd>SPACE</kbd> | Reset animation speed |
 | <kbd>ALT</kbd> + `Drag` | Make model look at mouse pointer |
 | <kbd>H</kbd> | Hide/Show UI |
+
+## Screenshots
+
+![Screenshot](https://raw.githubusercontent.com/DenchiSoft/CubismViewerGems/master/images/viewer_screenshot_v1_3_2.png "Screenshot")
+
 
 ## Gems
 
@@ -85,5 +90,4 @@ __Setup/Usage:__ Download and import `FFmpegOut.unitypackage` from https://githu
 _Note:_ This _gem_ can be used together with the `AnimationController` _gem_, although it is not recommended.
 
 
-## Screenshots
-![Screenshot](https://raw.githubusercontent.com/DenchiSoft/CubismViewerGems/master/images/viewer_screenshot_v1_0.png "Screenshot")
+
