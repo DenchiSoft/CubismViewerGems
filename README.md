@@ -4,9 +4,9 @@
 # CubismViewerGems
 Some _gems_ for the __Live2D Cubism Viewer__ at https://github.com/Live2D/CubismViewer to speed up and simplify Cubism model/animation testing in Unity. __Live2D SDK Version: 4-r.1 (Jan. 2020)__
 
-:warning: __Important:__ This project is not actively maintained anymore. There is now an official version of the Live2D Unity Viewer, which you can download from the Live2D Website __[here](https://github.com/DenchiSoft/CubismViewerGems/releases)__. :warning:
+:warning: __Important:__ This project is not actively maintained anymore. There is now an official version of the Live2D Unity Viewer, which you can download from the Live2D Website __[here](https://www.live2d.com/en/download/)__. :warning:
 
-:warning: __Download:__ Standalone Windows builds (64 bit) can be found in the __[releases section](https://www.live2d.com/en/download/)__. :warning:
+:warning: __Download:__ Standalone Windows builds (64 bit) can be found in the __[releases section](https://github.com/DenchiSoft/CubismViewerGems/releases)__. :warning:
 
 
 ## Contents
